@@ -6,18 +6,18 @@
 
 ```
 prompt/
-├── agents/                     # AI助手分类
-│   ├── content_creation/         # 内容创作类
-│   │   ├── 语络璇玑/               # 文学顾问+工作流
-│   │   └── 字观万象/               # 文学顾问
-│   ├── language/                 # 语言类
-│   │   └── 中英桥/                 # 翻译助手
-│   └── ...                       # 其他类别
-├── templates/                  # 提示词模板
-│   ├── prompt_engineer.md        # 提示词工程师角色
-├── workflows/                  # 工作流设计
-├── docs/                       # 文档和指南
-└── examples/                   # 使用示例
+├── agents/                             # AI助手分类
+│   ├── content_creation/               # 内容创作类
+│   │   ├── text_assistant_1/           # 语络璇玑（文学顾问+工作流）
+│   │   └── text_assistant_2/           # 字观万象（文学顾问）
+│   ├── language/                       # 语言类
+│   │   └── chinese_english_bridge/     # 中英桥（翻译助手）
+│   └── ...                             # 其他类别    
+├── templates/                          # 提示词模板
+│   ├── prompt_engineer.md              # 提示词工程师角色
+├── workflows/                          # 工作流设计
+├── docs/                               # 文档和指南
+└── examples/                           # 使用示例
 ```
 
 ## AI助手列表

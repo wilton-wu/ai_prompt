@@ -6,18 +6,15 @@
 
 ```
 prompt/
-├── agents/                             # AI助手分类
-│   ├── content_creation/               # 内容创作类
-│   │   ├── text_assistant_1/           # 语络璇玑（文学顾问+工作流）
-│   │   └── text_assistant_2/           # 字观万象（文学顾问）
-│   ├── language/                       # 语言类
-│   │   └── chinese_english_bridge/     # 中英桥（翻译助手）
-│   └── ...                             # 其他类别    
-├── templates/                          # 提示词模板
-│   ├── prompt_engineer.md              # 提示词工程师角色
-├── workflows/                          # 工作流设计
-├── docs/                               # 文档和指南
-└── examples/                           # 使用示例
+├── agents/                          # AI助手
+│   ├── content_creation/            # 内容创作类
+│   │   ├── text_assistant_1/        #   语络璇玑（文学顾问+工作流）
+│   │   └── text_assistant_2/        #   字观万象（文学顾问）
+│   └── language/                    # 语言类
+│       └── chinese_english_bridge/  #   中英桥（翻译助手）
+└── templates/                       # 提示词模板
+    ├── prompt_engineer.md           #   提示词精灵（调优提示词）
+    └── poetry_master.md          #   诗灵（诗词大师）
 ```
 
 ## AI助手列表
@@ -54,6 +51,6 @@ prompt/
 
 ## 使用指南
 
-1. 每个AI助手目录下包含完整的提示词文本和设计说明
-2. 工作流设计文件位于各助手目录的workflow子目录中
+1. 每个AI助手目录下包含完整的提示词文本
+2. 提示词模板文件位于templates子目录中
 3. 可直接通过链接访问Coze平台上的在线版本

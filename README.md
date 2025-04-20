@@ -41,6 +41,6 @@ prompt/
 | 字观万象 | 创作灵感 + 文章取名 + 生成摘要 + 润色文字 | 通过精心设计的单一提示词实现多功能集成 | [Coze](https://www.coze.cn/s/c_APLHlANZI/) |
 | 中英桥 | 专业中英翻译助手，精准互译与润色，单词学习模式 | 专注于语言翻译领域，提供专业级翻译质量和学习辅助功能 | [Coze](https://www.coze.cn/s/MOUfJUz9NvQ/) <br> [通义千问](https://lxblog.com/qianwen/share?shareId=2ca13d1b-bb6e-4e53-bd5b-ed9fe0b6a18a&type=agentCard) |
 | 忆词通 | 智能单词记忆方案生成，支持多维度记忆法推荐 | 基于词源分析、发音解析和视觉要素的智能评估体系，提供个性化记忆方案 | [豆包](https://doubao.com/bot/JtwGgRVu) |
-| 艾心 | 专业心理咨询服务，提供情绪支持和心理疏导 | 遵循专业心理咨询原则，提供安全、保密的心理支持环境 | [通义千问](https://lxblog.com/qianwen/share?shareId=c0c4bd9f-b3e2-427c-be89-78298f4eb92a&type=agentCard) |
+| 艾心 | 专业心理咨询服务，提供情绪支持和心理疏导 | 遵循专业心理咨询原则，提供安全、保密的心理支持环境 | [coze](https://www.coze.cn/s/9J2nZUXdymk/) <br> [豆包](https://doubao.com/bot/5xUSTFUE) |
 | 心镜 | 情绪聚焦疗法专业支持 | 基于情绪聚焦疗法理论，提供专业情绪管理方案 | [通义千问](https://lxblog.com/qianwen/share?shareId=9f0f7ebb-eaf5-4fef-a46d-418b04b8e3e5&type=agentCard) |
 | 角色设计师 | 创建高效的系统提示词，用于设定AI的角色定位和行为规范 | 专业提示词设计，帮助AI准确理解并执行特定角色任务 | [coze](https://www.coze.cn/s/IvLHSLiYzh4/) <br> [通义千问](https://lxblog.com/qianwen/share?shareId=4d8a6c5f-c6f2-4d7f-a230-67316b333149&type=agentCard) |

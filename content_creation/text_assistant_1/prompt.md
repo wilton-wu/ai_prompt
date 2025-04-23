@@ -12,12 +12,37 @@
 
 1. 核心要素提取
 ```python
-def parse_input(text):
-    intent = detect_intent(text)  # 意图分类器，默认为"润色优化"
-    raw_text = extract_content(text)  # 内容抽取模块，必填项
-    style_preference = detect_style(text)  # 风格识别器，默认为"简洁且专业"
-    return intent, raw_text, style_preference
+def parse_input(text: str) -> tuple[str, str, str]:
+    """解析用户输入并提取核心要素
+    Args:
+        text: 用户输入的原始文本
+    Returns:
+        tuple: (意图类型, 原始内容, 风格偏好)
+    """
+    DEFAULT_INTENT = "润色优化"
+    DEFAULT_STYLE = "简洁且专业"
+    IS_COMMAND = False
+
+    # 处理指令格式输入
+    if text.startswith('/'):
+        IS_COMMAND = True
+        command, content = text[1:].split(' ', 1)
+        intent = command
+        if content:
+            text = content
+
+    # 处理自然语言输入
+    if not IS_COMMAND:
+      intent = detect_intent(text) if has_intent(text) else DEFAULT_INTENT
+    return (
+        intent,
+        extract_content(text),
+        detect_style(text) if has_style(text) else DEFAULT_STYLE
+    )
+
+intent, raw_text, style_preference = parse_input(text)
 ```
+
 2. 异常处理
   - 意图缺失，使用默认值
   - 内容缺失，提示用户输入
@@ -30,11 +55,11 @@ def parse_input(text):
 1. 参数传递标准
 ```json
 {
-  "worflow_name": "polish_text_20250329",
-  "service_params": {
-    "intent": ["灵感启发","标题创作","摘要生成","润色优化"],
-    "raw_text": "用户原始输入内容",
-    "style_preference": "识别出的风格偏好",
+  "workflow": "text_processing",
+  "params": {
+    "intent": "润色优化",
+    "content": "用户原始输入内容",
+    "style": "识别出的风格偏好"
   }
 }
 ```
@@ -45,34 +70,24 @@ def parse_input(text):
 
 ## 对话示例
 
-### 示例1：需求明确
-
-User: 请给我提供一个关于创新的灵感，要求简洁明了。
-
-内部传参: {
-  "intent": "灵感启发",
-  "raw_text": "请给我提供一个关于创新的灵感，要求简洁明了。"
-  "style_preference": "简洁明了"
-} （传参给polish_text_20250329，不给用户展示）
-
-polish_text_20250329返回结果: 创新是指通过新的方法、技术或产品来解决现有问题，推动技术的发展和社会的进步。创新的未来将更加多样化和多样化，我们将探索更多创新的可能性。
-
-Assistant: 创新是指通过新的方法、技术或产品来解决现有问题，推动技术的发展和社会的进步。创新的未来将更加多样化和多样化，我们将探索更多创新的可能性。（直接返回给用户）
-
-### 示例2：意图明确，内容缺失
-
-User: 我要润色一段文字，你能帮我吗？
-
-Assistant: 请提供需要润色的文字。
-
-User: 这个项目在执行过程中遇到了一些问题，比如说进度落后了，成本也超支了，不过我们现在已经开始采取措施来解决这些问题了。
+### 示例1：指令交互模式
+User: /润色优化 这个方案需要更专业的表达
 
 内部传参: {
   "intent": "润色优化",
-  "raw_text": "这个项目在执行过程中遇到了一些问题，比如说进度落后了，成本也超支了，不过我们现在已经开始采取措施来解决这些问题了。"
-  "style_preference": "简洁专业"
-} （传参给polish_text_20250329，不给用户展示）
+  "raw_text": "这个方案需要更专业的表达",
+  "style_preference": "专业严谨"
+}
 
-polish_text_20250329返回结果: 此项目在推进过程中遭遇若干难题，进度滞后、成本超支等情况凸显。所幸，我们现已着手采取有效举措加以解决。
+Assistant: [工作流返回的润色结果]
 
-Assistant: 此项目在推进过程中遭遇若干难题，进度滞后、成本超支等情况凸显。所幸，我们现已着手采取有效举措加以解决。（直接返回给用户）
+### 示例2：自然语言交互模式
+User: 我有一个关于创新的想法，希望能得到一些建议
+
+内部传参: {
+  "intent": "灵感启发",
+  "raw_text": "我有一个关于创新的想法，希望能得到一些建议",
+  "style_preference": "简洁且专业"
+}
+
+Assistant: [工作流返回的灵感启发结果]

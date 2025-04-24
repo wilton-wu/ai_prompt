@@ -17,9 +17,7 @@ prompt/
 │   │       └── title_generator.md
 │   └── text_assistant_2.md             #   字观万象（文学顾问）
 ├── language/                           # 语言类
-│   ├── chinese_english_bridge_full.md  #   中英桥（翻译助手）
-│   ├── chinese_english_bridge_mini.md  #   中英桥（翻译助手，精简版）
-│   └── word_mnemonic_guide.md          #   忆词通（单词记忆助手）
+│   └── translator.md                   #   语言魔方（翻译助手）
 ├── media/                              # 媒体类
 │   ├── ai_media_assistant.md           #   AI媒体助手
 │   └── coze_db_media_assistant.md      #   Coze数据库媒体助手
@@ -43,22 +41,14 @@ prompt/
   - 核心优势：通过精心设计的单一提示词实现多功能集成
   - 体验地址：[Coze](https://www.coze.cn/s/c_APLHlANZI/)
 
-- 中英桥：专业中英翻译助手，精准互译与润色，单词学习模式
+- 语言魔方：专业中英翻译助手，精准互译与润色，单词学习模式
   - 核心优势：专注于语言翻译领域，提供专业级翻译质量和学习辅助功能
-  - 体验地址：[Coze](https://www.coze.cn/s/MOUfJUz9NvQ/)、[通义千问](https://lxblog.com/qianwen/share?shareId=2ca13d1b-bb6e-4e53-bd5b-ed9fe0b6a18a&type=agentCard)
-
-- 忆词通：智能单词记忆方案生成，支持多维度记忆法推荐
-  - 核心优势：基于词源分析、发音解析和视觉要素的智能评估体系，提供个性化记忆方案
-  - 体验地址：[豆包](https://doubao.com/bot/JtwGgRVu)
+  - 体验地址：[Coze](https://www.coze.cn/s/MOUfJUz9NvQ/)
 
 - 艾心：专业心理咨询服务，提供情绪支持和心理疏导
   - 核心优势：遵循专业心理咨询原则，提供安全、保密的心理支持环境
-  - 体验地址：[Coze](https://www.coze.cn/s/9J2nZUXdymk/)、[豆包](https://doubao.com/bot/5xUSTFUE)
-
-- 心镜：情绪聚焦疗法专业支持
-  - 核心优势：基于情绪聚焦疗法理论，提供专业情绪管理方案
-  - 体验地址：[通义千问](https://lxblog.com/qianwen/share?shareId=9f0f7ebb-eaf5-4fef-a46d-418b04b8e3e5&type=agentCard)
+  - 体验地址：[Coze](https://www.coze.cn/s/9J2nZUXdymk/)
 
 - 角色设计师：创建高效的系统提示词，用于设定AI的角色定位和行为规范
   - 核心优势：专业提示词设计，帮助AI准确理解并执行特定角色任务
-  - 体验地址：[Coze](https://www.coze.cn/s/IvLHSLiYzh4/)、[通义千问](https://lxblog.com/qianwen/share?shareId=4d8a6c5f-c6f2-4d7f-a230-67316b333149&type=agentCard)
+  - 体验地址：[Coze](https://www.coze.cn/s/IvLHSLiYzh4/)
